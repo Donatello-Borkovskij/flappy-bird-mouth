@@ -269,10 +269,10 @@ def main():
             mar = mouthMAR
             # compute the convex hull for the mouth, then
             # visualize the mouth
-            mouthHull = cv2.convexHull(mouth)
-
-            cv2.drawContours(frame, [mouthHull], -1, (0, 255, 0), 1)
-            cv2.putText(frame, "MAR: {:.2f}".format(mar), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+            # mouthHull = cv2.convexHull(mouth)
+            #
+            # cv2.drawContours(frame, [mouthHull], -1, (0, 255, 0), 1)
+            # cv2.putText(frame, "MAR: {:.2f}".format(mar), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
             # Draw text if mouth is open
             if mar > MOUTH_AR_THRESH:
